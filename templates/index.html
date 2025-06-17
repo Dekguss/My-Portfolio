@@ -1,0 +1,1957 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Pengaturan Dasar -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dwi Adnyana | Portfolio</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e3a8a',
+                        secondary: '#3b82f6'
+                    },
+                    borderRadius: {
+                        'none': '0px',
+                        'sm': '4px',
+                        DEFAULT: '8px',
+                        'md': '12px',
+                        'lg': '16px',
+                        'xl': '20px',
+                        '2xl': '24px',
+                        '3xl': '32px',
+                        'full': '9999px',
+                        'button': '8px'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Libraries -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Charting Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.5.0/echarts.min.js"></script>
+
+    <!-- File CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <!-- File JavaScript -->
+    <script src="{{ url_for('static', filename='js/view_project.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/modal_sertif.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/view_all_achievements.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/contact-form.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="{{ url_for('static', filename='js/navigation.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+    <script src="{{ url_for('static', filename='js/skills-chart.js') }}"></script>
+</head>
+
+<body class="bg-gray-50">
+    <div class="flex min-h-screen">
+        <!-- Sidebar -->
+        <aside id="sidebar"
+            class="sidebar fixed top-0 left-0 z-40 h-screen w-64 bg-white shadow-lg transition-transform duration-300 ease-in-out">
+            <div class="flex h-full flex-col justify-between p-4">
+                <div>
+                    <div class="mb-8 flex items-center justify-center py-4">
+                        <h1 class="font-['Pacifico'] text-2xl text-primary">Dwi Adnyana</h1>
+                    </div>
+                    <nav>
+                        <ul class="space-y-2">
+                            <li>
+                                <a href="#home" class="nav-link flex items-center rounded-lg p-3 text-gray-700">
+                                    <div class="mr-3 flex h-8 w-8 items-center justify-center">
+                                        <i class="ri-home-line ri-lg"></i>
+                                    </div>
+                                    <span>Home</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#about" class="nav-link flex items-center rounded-lg p-3 text-gray-700">
+                                    <div class="mr-3 flex h-8 w-8 items-center justify-center">
+                                        <i class="ri-user-line ri-lg"></i>
+                                    </div>
+                                    <span>About Me</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#projects" class="nav-link flex items-center rounded-lg p-3 text-gray-700">
+                                    <div class="mr-3 flex h-8 w-8 items-center justify-center">
+                                        <i class="ri-folder-line ri-lg"></i>
+                                    </div>
+                                    <span>Projects</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#skills" class="nav-link flex items-center rounded-lg p-3 text-gray-700">
+                                    <div class="mr-3 flex h-8 w-8 items-center justify-center">
+                                        <i class="ri-tools-line ri-lg"></i>
+                                    </div>
+                                    <span>Skills</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#achievements" class="nav-link flex items-center rounded-lg p-3 text-gray-700">
+                                    <div class="mr-3 flex h-8 w-8 items-center justify-center">
+                                        <i class="ri-award-line ri-lg"></i>
+                                    </div>
+                                    <span>Achievements</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#resume" class="nav-link flex items-center rounded-lg p-3 text-gray-700">
+                                    <div class="mr-3 flex h-8 w-8 items-center justify-center">
+                                        <i class="ri-file-list-line ri-lg"></i>
+                                    </div>
+                                    <span>Resume</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#contact" class="nav-link flex items-center rounded-lg p-3 text-gray-700">
+                                    <div class="mr-3 flex h-8 w-8 items-center justify-center">
+                                        <i class="ri-mail-line ri-lg"></i>
+                                    </div>
+                                    <span>Contact</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <!-- Social Icons -->
+                <div class="mt-auto">
+                    <div class="flex justify-center space-x-4 py-4">
+                        <a href="https://www.linkedin.com/in/dwiadnyana04"
+                            class="flex h-10 w-10 items-center justify-center rounded-full bg-gray-100 text-gray-700 hover:bg-primary hover:text-white">
+                            <i class="ri-linkedin-fill ri-lg"></i>
+                        </a>
+                        <a href="https://github.com/Dekguss"
+                            class="flex h-10 w-10 items-center justify-center rounded-full bg-gray-100 text-gray-700 hover:bg-primary hover:text-white">
+                            <i class="ri-github-fill ri-lg"></i>
+                        </a>
+                        <a href="https://www.instagram.com/dwiiadnyana7"
+                            class="flex h-10 w-10 items-center justify-center rounded-full bg-gray-100 text-gray-700 hover:bg-primary hover:text-white">
+                            <i class="ri-instagram-fill ri-lg"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Mobile Header -->
+        <div class="fixed top-0 left-0 z-30 flex w-full items-center justify-between bg-white p-4 shadow-md md:hidden">
+            <h1 class="font-['Pacifico'] text-xl text-primary">Dwi Adnyana</h1>
+            <button id="menuToggle"
+                class="flex h-10 w-10 items-center justify-center rounded-lg text-gray-700 hover:bg-gray-100">
+                <i class="ri-menu-line ri-lg"></i>
+            </button>
+        </div>
+
+        <!-- Main Content -->
+        <main class="flex-1 px-4 pt-2 md:ml-64 md:px-8 md:pt-8">
+            <!-- Home Section -->
+            <section id="home" class="min-h-screen pt-16 md:pt-0 px-0 md:px-16">
+                <div
+                    class="flex min-h-[calc(100vh-4rem)] flex-col items-center justify-center md:flex-row md:space-x-8">
+                    <!-- Image - Moved to top on mobile -->
+                    <div class="order-first mb-8 w-full md:order-last md:mb-0 md:w-1/2">
+                        <img src="/static/images/home.png" alt="Profile Image"
+                            class="mx-auto h-auto w-3/4 max-w-[260px] rounded-full object-cover shadow-lg bg-primary/5 md:w-full md:max-w-md">
+                    </div>
+
+                    <!-- Content -->
+                    <div class="md:w-1/2">
+                        <h2 class="mb-2 text-lg font-medium text-primary">Welcome to my portfolio</h2>
+                        <h1 class="mb-6 text-4xl font-bold text-gray-800 md:text-5xl">Hi, I'm <span
+                                class="text-primary">Dwi Adnyana</span></h1>
+                        <p class="mb-8 text-lg text-gray-600">Web Developer with a passion for building responsive,
+                            intuitive, and visually appealing websites and web apps. Focused on great user experiences,
+                            clean code, and innovative digital solutions that meet user and business needs.</p>
+                        <div class="flex flex-wrap gap-4">
+                            <a href="#contact"
+                                class="whitespace-nowrap !rounded-button bg-primary px-6 py-3 font-medium text-white shadow-md transition hover:bg-primary/90">Get
+                                in Touch</a>
+                            <a href="#projects"
+                                class="whitespace-nowrap !rounded-button border-2 border-primary bg-transparent px-6 py-3 font-medium text-primary shadow-md transition hover:bg-primary/10">View
+                                Projects</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About Me Section -->
+            <section id="about" class="relative min-h-screen overflow-hidden py-16 px-0 md:px-16">
+                <!-- Background Shape -->
+                <div
+                    class="absolute -right-32 top-1/2 -z-10 hidden h-[800px] w-[800px] -translate-y-1/2 transform rounded-full bg-primary/5 md:block">
+                </div>
+
+                <div class="container relative mx-auto">
+                    <div class="mb-12 text-center">
+                        <h2 class="mb-2 text-lg font-medium text-primary">About Me</h2>
+                        <h1 class="text-3xl font-bold text-gray-800 md:text-4xl">Get to know me better</h1>
+                    </div>
+                    <div class="flex flex-col items-center md:flex-row md:items-start md:space-x-12">
+                        <div class="relative mb-8 md:mb-0 md:w-1/3">
+                            <!-- Slanted Background -->
+                            <div
+                                class="absolute -left-1 -top-3 -right-4 -bottom-3 -z-10 h-full w-full rounded-2xl bg-primary/20 -rotate-3 scale-95">
+                            </div>
+                            <!-- Image -->
+                            <div class="relative flex h-full items-center p-4 md:p-0">
+                                <img src="/static/images/about.JPG" alt="About Me Image"
+                                    class="mx-auto h-auto w-full max-w-xs rounded-2xl object-cover object-center shadow-lg md:max-w-sm md:h-full">
+                            </div>
+                        </div>
+                        <div class="md:w-2/3">
+                            <h3 class="mb-4 text-2xl font-semibold text-gray-800">Who am I?</h3>
+                            <p class="mb-6 text-gray-600">I am a fresh graduate from Udayana University, majoring in
+                                Informatics, with a strong interest in web development. During my studies, I actively
+                                worked on various web projects that enhanced my skills in both frontend and backend
+                                development. I enjoy learning new technologies and aim to build web applications that
+                                are responsive, efficient, and user-friendly.</p>
+                            <p class="mb-8 text-gray-600">I enjoy solving complex problems and turning ideas into
+                                reality
+                                through elegant interfaces. When I'm not coding, you can find me photography, gaming,
+                                listening to music, playing football, or experimenting with new technologies.</p>
+                            <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+                                <div class="rounded-2xl bg-white p-6 shadow-md">
+                                    <h4 class="mb-4 text-lg font-semibold text-gray-800">Personal Info</h4>
+                                    <ul class="space-y-3">
+                                        <li class="flex items-center">
+                                            <div class="mr-3 flex h-8 w-8 items-center justify-center text-primary">
+                                                <i class="ri-user-line ri-lg"></i>
+                                            </div>
+                                            <div>
+                                                <span class="text-sm text-gray-500">Name</span>
+                                                <p class="font-medium">I Kadek Dwi Adnyana</p>
+                                            </div>
+                                        </li>
+                                        <li class="flex items-center">
+                                            <div class="mr-3 flex h-8 w-8 items-center justify-center text-primary">
+                                                <i class="ri-map-pin-line ri-lg"></i>
+                                            </div>
+                                            <div>
+                                                <span class="text-sm text-gray-500">Address</span>
+                                                <p class="font-medium">Tabanan, Bali, Indonesia</p>
+                                            </div>
+                                        </li>
+                                        <li class="flex items-center">
+                                            <div class="mr-3 flex h-8 w-8 items-center justify-center text-primary">
+                                                <i class="ri-mail-line ri-lg"></i>
+                                            </div>
+                                            <div>
+                                                <span class="text-sm text-gray-500">Email</span>
+                                                <p class="font-medium">dwiadnyanaa04@gmail.com</p>
+                                            </div>
+                                        </li>
+                                        <li class="flex items-center">
+                                            <div class="mr-3 flex h-8 w-8 items-center justify-center text-primary">
+                                                <i class="ri-phone-line ri-lg"></i>
+                                            </div>
+                                            <div>
+                                                <span class="text-sm text-gray-500">Phone</span>
+                                                <p class="font-medium">+62 815-2980-8370</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="rounded-2xl bg-white p-6 shadow-md">
+                                    <h4 class="mb-4 text-lg font-semibold text-gray-800">Interests</h4>
+                                    <div class="flex flex-wrap gap-3">
+                                        <span
+                                            class="rounded-full bg-secondary/20 px-4 py-2 text-sm font-medium text-primary">Web
+                                            Development</span>
+                                        <span
+                                            class="rounded-full bg-secondary/20 px-4 py-2 text-sm font-medium text-primary">UI/UX
+                                            Design</span>
+                                        <span
+                                            class="rounded-full bg-secondary/20 px-4 py-2 text-sm font-medium text-primary">Open
+                                            Source</span>
+                                        <span
+                                            class="rounded-full bg-secondary/20 px-4 py-2 text-sm font-medium text-primary">Cloud
+                                            Computing</span>
+                                        <span
+                                            class="rounded-full bg-secondary/20 px-4 py-2 text-sm font-medium text-primary">Data
+                                            Analyst</span>
+                                        <span
+                                            class="rounded-full bg-secondary/20 px-4 py-2 text-sm font-medium text-primary">Photography</span>
+                                        <span
+                                            class="rounded-full bg-secondary/20 px-4 py-2 text-sm font-medium text-primary">Gaming</span>
+                                        <span
+                                            class="rounded-full bg-secondary/20 px-4 py-2 text-sm font-medium text-primary">Music</span>
+                                        <span
+                                            class="rounded-full bg-secondary/20 px-4 py-2 text-sm font-medium text-primary">Running</span>
+                                        <span
+                                            class="rounded-full bg-secondary/20 px-4 py-2 text-sm font-medium text-primary">Football</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section id="projects" class="relative min-h-screen overflow-hidden py-16 px-0 md:px-16">
+                <div class="container mx-auto">
+                    <div class="text-center mb-12">
+                        <h2 class="mb-4 text-center text-3xl font-bold text-gray-800">My <span
+                                class="text-primary">Projects</span></h2>
+                        <div class="w-20 h-1 bg-primary mx-auto mb-4"></div>
+                        <p class="text-gray-600 max-w-2xl mx-auto">
+                            A selection of my recent work, showcasing my skills in web
+                            development, UI/UX design, and problem-solving.
+                        </p>
+                    </div>
+
+                    <!-- Project items will go here -->
+                    <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+
+                        <!-- Project 1 -->
+                        <div
+                            class="group overflow-hidden rounded-2xl bg-gradient-to-br from-white to-gray-50 shadow-md transition-all hover:shadow-lg project-card border-2 border-gray-250 flex flex-col h-full">
+                            <!-- gambar -->
+                            <div class="relative h-48 overflow-hidden flex-shrink-0">
+                                <img src="/static/project/marerep.jpg" alt="E-commerce Platform"
+                                    class="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105">
+                            </div>
+                            <!-- garis pembatas -->
+                            <div class="border-b-2 border-gray-100"></div>
+                            <!-- informasi -->
+                            <div class="p-6 flex-1 flex flex-col">
+                                <h3 class="text-xl font-semibold text-gray-800 line-clamp-2 h-14 mb-2">Villa
+                                    Recommendation
+                                    Website in Bali</h3>
+                                <p class="mb-4 text-gray-600 flex-1">Developed a villa recommendation website in Bali
+                                    using
+                                    Flask, Bootstrap, and MongoDB, which suggests villas based on nearby tourist
+                                    attractions.</p>
+                                <!-- ikon -->
+                                <div class="mb-4 flex flex-wrap gap-2">
+                                    <span
+                                        class="inline-flex items-center gap-1.5 rounded-full border border-black/10 bg-black/5 px-3 py-1 text-sm font-medium text-gray-800">
+                                        <img src="https://icon.icepanel.io/Technology/png-shadow-512/Flask.png"
+                                            class="h-5 w-5 object-contain" alt="Flask">
+                                        Flask
+                                    </span>
+                                    <span
+                                        class="inline-flex items-center gap-1.5 rounded-full border border-purple-600/20 bg-purple-600/10 px-3 py-1 text-sm font-medium text-purple-800">
+                                        <i class="fab fa-bootstrap text-base text-purple-700"></i>
+                                        Bootstrap
+                                    </span>
+                                    <span
+                                        class="inline-flex items-center gap-1.5 rounded-full border border-green-600/20 bg-green-600/10 px-3 py-1 text-sm font-medium text-green-800">
+                                        <img src="https://images.icon-icons.com/2699/PNG/512/mongodb_logo_icon_170943.png"
+                                            class="h-5 w-5 object-contain" alt="MongoDB">
+                                        MongoDB
+                                    </span>
+                                </div>
+                                <!-- tombol -->
+                                <div class="flex justify-between gap-2 mt-auto">
+                                    <a href="https://cisco-marerep.glitch.me/"
+                                        class="text-primary hover:underline flex items-center" target="_blank"
+                                        rel="noopener noreferrer">
+                                        <span>View Project</span>
+                                        <i class="ri-arrow-right-line ml-1"></i>
+                                    </a>
+                                    <a href="https://github.com/yourusername/your-repo"
+                                        class="flex h-9 w-9 items-center justify-center rounded-full border-2 border-gray-200 bg-gray-100 text-gray-700 transition hover:bg-gray-200 hover:border-gray-300"
+                                        title="View on GitHub" target="_blank" rel="noopener noreferrer">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 2 -->
+                        <div
+                            class="group overflow-hidden rounded-2xl bg-gradient-to-br from-white to-gray-50 shadow-md transition-all hover:shadow-lg project-card border-2 border-gray-250 flex flex-col h-full">
+                            <!-- gambar -->
+                            <div class="relative h-48 overflow-hidden flex-shrink-0">
+                                <img src="/static/project/komisi infomas.png" alt="E-commerce Platform"
+                                    class="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105">
+                            </div>
+                            <!-- garis pembatas -->
+                            <div class="border-b-2 border-gray-100"></div>
+                            <!-- informasi -->
+                            <div class="p-6 flex-1 flex flex-col">
+                                <h3 class="text-xl font-semibold text-gray-800 line-clamp-2 h-14 mb-2">Bali Provincial
+                                    Information Commission Website</h3>
+                                <p class="mb-4 text-gray-600 flex-1">Developed the official website of Komisi Informasi
+                                    Provinsi Bali using WordPress. Create features to add news, popups, and running
+                                    text.</p>
+                                <!-- ikon -->
+                                <div class="mb-4 flex flex-wrap gap-2">
+                                    <span
+                                        class="inline-flex items-center gap-1.5 rounded-full border border-blue-600/20 bg-blue-600/10 px-3 py-1 text-sm font-medium text-blue-800">
+                                        <i class="fab fa-wordpress text-base text-blue-700"></i> WordPress
+                                    </span>
+                                </div>
+                                <!-- tombol -->
+                                <div class="flex justify-between gap-2 mt-auto">
+                                    <a href="https://ki.baliprov.go.id/"
+                                        class="text-primary hover:underline flex items-center" target="_blank"
+                                        rel="noopener noreferrer">
+                                        <span>View Project</span>
+                                        <i class="ri-arrow-right-line ml-1"></i>
+                                    </a>
+                                    <a href="https://ki.baliprov.go.id/"
+                                        class="flex h-9 w-9 items-center justify-center rounded-full border-2 border-gray-200 bg-gray-100 text-gray-700 transition hover:bg-gray-200 hover:border-gray-300"
+                                        title="View on GitHub" target="_blank" rel="noopener noreferrer">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 3 -->
+                        <div
+                            class="group overflow-hidden rounded-2xl bg-gradient-to-br from-white to-gray-50 shadow-md transition-all hover:shadow-lg project-card border-2 border-gray-250 flex flex-col h-full">
+                            <!-- gambar -->
+                            <div class="relative h-48 overflow-hidden flex-shrink-0">
+                                <img src="/static/project/motorbekas.png" alt="E-commerce Platform"
+                                    class="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105">
+                            </div>
+                            <!-- garis pembatas -->
+                            <div class="border-b-2 border-gray-100"></div>
+                            <!-- informasi -->
+                            <div class="p-6 flex-1 flex flex-col">
+                                <h3 class="text-xl font-semibold text-gray-800 line-clamp-2 h-14 mb-2">Used Motorcycle
+                                    Recommendation System</h3>
+                                <p class="mb-4 text-gray-600 flex-1">Developed a used motorcycle recommendation system
+                                    using
+                                    fuzzy FMADM and SAW methods to rank options based on multiple criteria.</p>
+                                <!-- ikon -->
+                                <div class="mb-4 flex flex-wrap gap-2">
+                                    <span
+                                        class="inline-flex items-center gap-1.5 rounded-full border border-black/10 bg-black/5 px-3 py-1 text-sm font-medium text-gray-800">
+                                        <img src="https://icon.icepanel.io/Technology/png-shadow-512/Flask.png"
+                                            class="h-5 w-5 object-contain" alt="Flask">
+                                        Flask
+                                    </span>
+                                    <span
+                                        class="inline-flex items-center gap-1.5 rounded-full border border-black/10 bg-black/5 px-3 py-1 text-sm font-medium text-gray-800">
+                                        <img src="https://icon.icepanel.io/Technology/png-shadow-512/Next.js.png"
+                                            class="h-5 w-5 object-contain" alt="Next.js">
+                                        Next.js
+                                    </span>
+                                    <span
+                                        class="inline-flex items-center gap-1.5 rounded-full border border-blue-200 bg-blue-50 px-3 py-1 text-sm font-medium text-blue-800">
+                                        <img src="https://icon.icepanel.io/Technology/svg/MySQL.svg"
+                                            class="h-5 w-5 object-contain" alt="MySQL">
+                                        MySQL
+                                    </span>
+                                </div>
+                                <!-- tombol -->
+                                <div class="flex justify-between gap-2 mt-auto">
+                                    <a href="https://ki.baliprov.go.id/"
+                                        class="text-primary hover:underline flex items-center" target="_blank"
+                                        rel="noopener noreferrer">
+                                        <span>View Project</span>
+                                        <i class="ri-arrow-right-line ml-1"></i>
+                                    </a>
+                                    <a href="https://ki.baliprov.go.id/"
+                                        class="flex h-9 w-9 items-center justify-center rounded-full border-2 border-gray-200 bg-gray-100 text-gray-700 transition hover:bg-gray-200 hover:border-gray-300"
+                                        title="View on GitHub" target="_blank" rel="noopener noreferrer">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 4 -->
+                        <div
+                            class="group overflow-hidden rounded-2xl bg-gradient-to-br from-white to-gray-50 shadow-md transition-all hover:shadow-lg project-card border-2 border-gray-250 flex flex-col h-full">
+                            <!-- gambar -->
+                            <div class="relative h-48 overflow-hidden flex-shrink-0">
+                                <img src="/static/project/rentcar.png" alt="E-commerce Platform"
+                                    class="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105">
+                            </div>
+                            <!-- garis pembatas -->
+                            <div class="border-b-2 border-gray-100"></div>
+                            <!-- informasi -->
+                            <div class="p-6 flex-1 flex flex-col">
+                                <h3 class="text-xl font-semibold text-gray-800 line-clamp-2 h-14 mb-2">Prototype RentCar
+                                </h3>
+                                <p class="mb-4 text-gray-600 flex-1">Developed a mobile prototype for car purchasing
+                                    plans using Figma, enabling users to explore and compare car options based on
+                                    various criteria.</p>
+                                <!-- ikon -->
+                                <div class="mb-4 flex flex-wrap gap-2">
+                                    <span
+                                        class="inline-flex items-center gap-1.5 rounded-full border border-purple-600/20 bg-purple-600/10 px-3 py-1 text-sm font-medium text-purple-800">
+                                        <i class="fab fa-figma text-base text-purple-700"></i> Figma
+                                    </span>
+                                </div>
+                                <!-- tombol -->
+                                <div class="flex justify-between gap-2 mt-auto">
+                                    <a href="https://ki.baliprov.go.id/"
+                                        class="text-primary hover:underline flex items-center" target="_blank"
+                                        rel="noopener noreferrer">
+                                        <span>View Project</span>
+                                        <i class="ri-arrow-right-line ml-1"></i>
+                                    </a>
+                                    <a href="https://github.com/yourusername/your-repo"
+                                        class="flex h-9 w-9 items-center justify-center rounded-full border-2 border-gray-200 bg-gray-100 text-gray-700 transition hover:bg-gray-200 hover:border-gray-300"
+                                        title="View on GitHub" target="_blank" rel="noopener noreferrer">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 5 -->
+                        <div
+                            class="group overflow-hidden rounded-2xl bg-gradient-to-br from-white to-gray-50 shadow-md transition-all hover:shadow-lg project-card border-2 border-gray-250 flex flex-col h-full">
+                            <!-- gambar -->
+                            <div class="relative h-48 overflow-hidden flex-shrink-0">
+                                <img src="/static/project/perpus.jpg" alt="E-commerce Platform"
+                                    class="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105">
+                            </div>
+                            <!-- garis pembatas -->
+                            <div class="border-b-2 border-gray-100"></div>
+                            <!-- informasi -->
+                            <div class="p-6 flex-1 flex flex-col">
+                                <h3 class="text-xl font-semibold text-gray-800 line-clamp-2 h-14 mb-2">Online Library
+                                    Website</h3>
+                                <p class="mb-4 text-gray-600 flex-1">A online library website featuring premium and
+                                    non-premium users, where premium users have access to exclusive content and
+                                    features.</p>
+                                <!-- ikon -->
+                                <div class="mb-4 flex flex-wrap gap-2">
+                                    <span
+                                        class="inline-flex items-center gap-1.5 rounded-full border border-blue-800/20 bg-blue-800/10 px-3 py-1 text-sm font-medium text-blue-800">
+                                        <i class="fab fa-php text-base"></i> PHP
+                                    </span>
+                                    <span
+                                        class="inline-flex items-center gap-1.5 rounded-full border border-cyan-400/20 bg-cyan-400/10 px-3 py-1 text-sm font-medium text-cyan-700">
+                                        <i class="fab fa-react text-base text-cyan-500"></i> React
+                                    </span>
+                                    <span
+                                        class="inline-flex items-center gap-1.5 rounded-full border border-blue-200 bg-blue-50 px-3 py-1 text-sm font-medium text-blue-800">
+                                        <img src="https://icon.icepanel.io/Technology/svg/MySQL.svg"
+                                            class="h-5 w-5 object-contain" alt="MySQL">
+                                        MySQL
+                                    </span>
+                                </div>
+                                <!-- tombol -->
+                                <div class="flex justify-between gap-2 mt-auto">
+                                    <a href="https://cisco-marerep.glitch.me/"
+                                        class="text-primary hover:underline flex items-center" target="_blank"
+                                        rel="noopener noreferrer">
+                                        <span>View Project</span>
+                                        <i class="ri-arrow-right-line ml-1"></i>
+                                    </a>
+                                    <a href="https://github.com/yourusername/your-repo"
+                                        class="flex h-9 w-9 items-center justify-center rounded-full border-2 border-gray-200 bg-gray-100 text-gray-700 transition hover:bg-gray-200 hover:border-gray-300"
+                                        title="View on GitHub" target="_blank" rel="noopener noreferrer">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 6 -->
+                        <div
+                            class="group overflow-hidden rounded-2xl bg-gradient-to-br from-white to-gray-50 shadow-md transition-all hover:shadow-lg project-card border-2 border-gray-250 flex flex-col h-full">
+                            <!-- gambar -->
+                            <div class="relative h-48 overflow-hidden flex-shrink-0">
+                                <img src="/static/project/twit.jpg" alt="E-commerce Platform"
+                                    class="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105">
+                            </div>
+                            <!-- garis pembatas -->
+                            <div class="border-b-2 border-gray-100"></div>
+                            <!-- informasi -->
+                            <div class="p-6 flex-1 flex flex-col">
+                                <h3 class="text-xl font-semibold text-gray-800 line-clamp-2 h-14 mb-2">The Sweeter
+                                    Website</h3>
+                                <p class="mb-4 text-gray-600 flex-1">A microblogging website similar to Twitter,
+                                    allowing users to post short messages, follow others, and interact in real-time.</p>
+                                <!-- ikon -->
+                                <div class="mb-4 flex flex-wrap gap-2">
+                                    <span
+                                        class="inline-flex items-center gap-1.5 rounded-full border border-black/10 bg-black/5 px-3 py-1 text-sm font-medium text-gray-800">
+                                        <img src="https://icon.icepanel.io/Technology/png-shadow-512/Flask.png"
+                                            class="h-5 w-5 object-contain" alt="Flask">
+                                        Flask
+                                    </span>
+                                    <span
+                                        class="inline-flex items-center gap-1.5 rounded-full border border-purple-600/20 bg-purple-600/10 px-3 py-1 text-sm font-medium text-purple-800">
+                                        <i class="fab fa-bootstrap text-base text-purple-700"></i>
+                                        Bootstrap
+                                    </span>
+                                    <span
+                                        class="inline-flex items-center gap-1.5 rounded-full border border-green-600/20 bg-green-600/10 px-3 py-1 text-sm font-medium text-green-800">
+                                        <img src="https://images.icon-icons.com/2699/PNG/512/mongodb_logo_icon_170943.png"
+                                            class="h-5 w-5 object-contain" alt="MongoDB">
+                                        MongoDB
+                                    </span>
+                                </div>
+                                <!-- tombol -->
+                                <div class="flex justify-between gap-2 mt-auto">
+                                    <a href="https://dwiadnyana-sweeter.glitch.me/"
+                                        class="text-primary hover:underline flex items-center" target="_blank"
+                                        rel="noopener noreferrer">
+                                        <span>View Project</span>
+                                        <i class="ri-arrow-right-line ml-1"></i>
+                                    </a>
+                                    <a href="https://github.com/yourusername/your-repo"
+                                        class="flex h-9 w-9 items-center justify-center rounded-full border-2 border-gray-200 bg-gray-100 text-gray-700 transition hover:bg-gray-200 hover:border-gray-300"
+                                        title="View on GitHub" target="_blank" rel="noopener noreferrer">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 7 -->
+                        <div
+                            class="group overflow-hidden rounded-2xl bg-gradient-to-br from-white to-gray-50 shadow-md transition-all hover:shadow-lg project-card border-2 border-gray-250 flex flex-col h-full">
+                            <!-- gambar -->
+                            <div class="relative h-48 overflow-hidden flex-shrink-0">
+                                <img src="/static/project/vocabulary.png" alt="E-commerce Platform"
+                                    class="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105">
+                            </div>
+                            <!-- garis pembatas -->
+                            <div class="border-b-2 border-gray-100"></div>
+                            <!-- informasi -->
+                            <div class="p-6 flex-1 flex flex-col">
+                                <h3 class="text-xl font-semibold text-gray-800 line-clamp-2 h-14 mb-2">Vocabulary
+                                    Notebook Website</h3>
+                                <p class="mb-4 text-gray-600 flex-1">A vocabulary notebook website that allows users to
+                                    save, organize, and review new words, helping them improve their language skills
+                                    efficiently.</p>
+                                <!-- ikon -->
+                                <div class="mb-4 flex flex-wrap gap-2">
+                                    <span
+                                        class="inline-flex items-center gap-1.5 rounded-full border border-black/10 bg-black/5 px-3 py-1 text-sm font-medium text-gray-800">
+                                        <img src="https://icon.icepanel.io/Technology/png-shadow-512/Flask.png"
+                                            class="h-5 w-5 object-contain" alt="Flask">
+                                        Flask
+                                    </span>
+                                    <span
+                                        class="inline-flex items-center gap-1.5 rounded-full border border-purple-600/20 bg-purple-600/10 px-3 py-1 text-sm font-medium text-purple-800">
+                                        <i class="fab fa-bootstrap text-base text-purple-700"></i>
+                                        Bootstrap
+                                    </span>
+                                    <span
+                                        class="inline-flex items-center gap-1.5 rounded-full border border-green-600/20 bg-green-600/10 px-3 py-1 text-sm font-medium text-green-800">
+                                        <img src="https://images.icon-icons.com/2699/PNG/512/mongodb_logo_icon_170943.png"
+                                            class="h-5 w-5 object-contain" alt="MongoDB">
+                                        MongoDB
+                                    </span>
+                                </div>
+                                <!-- tombol -->
+                                <div class="flex justify-between gap-2 mt-auto">
+                                    <a href="https://dwiadnyana-wordlist.glitch.me/"
+                                        class="text-primary hover:underline flex items-center" target="_blank"
+                                        rel="noopener noreferrer">
+                                        <span>View Project</span>
+                                        <i class="ri-arrow-right-line ml-1"></i>
+                                    </a>
+                                    <a href="https://github.com/yourusername/your-repo"
+                                        class="flex h-9 w-9 items-center justify-center rounded-full border-2 border-gray-200 bg-gray-100 text-gray-700 transition hover:bg-gray-200 hover:border-gray-300"
+                                        title="View on GitHub" target="_blank" rel="noopener noreferrer">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 8 -->
+                        <div
+                            class="group overflow-hidden rounded-2xl bg-gradient-to-br from-white to-gray-50 shadow-md transition-all hover:shadow-lg project-card border-2 border-gray-250 flex flex-col h-full">
+                            <!-- gambar -->
+                            <div class="relative h-48 overflow-hidden flex-shrink-0">
+                                <img src="/static/project/dashboard sentimen analisis.png"
+                                    alt="Sentiment Analysis Dashboard"
+                                    class="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105">
+                            </div>
+                            <!-- garis pembatas -->
+                            <div class="border-b-2 border-gray-100"></div>
+                            <!-- informasi -->
+                            <div class="p-6 flex-1 flex flex-col">
+                                <h3 class="text-xl font-semibold text-gray-800 line-clamp-2 h-14 mb-2">Sentiment
+                                    Analysis
+                                    Dashboard</h3>
+                                <p class="mb-4 text-gray-600 flex-1">A sentiment analysis dashboard displaying past
+                                    participant feedback to help future participants make informed decisions.</p>
+                                <!-- ikon -->
+                                <div class="mb-4 flex flex-wrap gap-2">
+                                    <span
+                                        class="inline-flex items-center gap-1.5 rounded-full border border-blue-600/20 bg-blue-600/10 px-3 py-1 text-sm font-medium text-blue-800">
+                                        <i class="fab fa-python text-base text-blue-700"></i> Python
+                                    </span>
+                                    <span
+                                        class="inline-flex items-center gap-1.5 rounded-full border border-yellow-500/20 bg-yellow-500/10 px-3 py-1 text-sm font-medium text-yellow-800">
+                                        <img src="https://images.seeklogo.com/logo-png/43/2/power-bi-icon-logo-png_seeklogo-439962.png"
+                                            class="h-5 w-5 object-contain" alt="Power BI">
+                                        Power BI
+                                    </span>
+                                </div>
+                                <!-- tombol -->
+                                <div class="flex justify-between gap-2 mt-auto">
+                                    <a href="https://dwiadnyana-wordlist.glitch.me/"
+                                        class="text-primary hover:underline flex items-center" target="_blank"
+                                        rel="noopener noreferrer">
+                                        <span>View Project</span>
+                                        <i class="ri-arrow-right-line ml-1"></i>
+                                    </a>
+                                    <a href="https://github.com/yourusername/your-repo"
+                                        class="flex h-9 w-9 items-center justify-center rounded-full border-2 border-gray-200 bg-gray-100 text-gray-700 transition hover:bg-gray-200 hover:border-gray-300"
+                                        title="View on GitHub" target="_blank" rel="noopener noreferrer">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Button view all -->
+                    <div class="mt-12 text-center">
+                        <button id="loadMoreBtn"
+                            class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-primary/90 transition-colors duration-300">
+                            View All Projects
+                            <svg class="ml-2 -mr-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Skills Section -->
+            <section id="skills" class="relative min-h-screen overflow-hidden py-16 px-0 md:px-16">
+                <div class="mb-12 text-center">
+                    <h2 class="text-3xl font-bold mb-2">My Skills</h2>
+                    <div class="h-1 w-24 bg-primary mx-auto"></div>
+                    <p class="text-gray-400 mt-4 max-w-2xl mx-auto">I've worked with a variety of technologies and tools
+                        throughout my career. Here's an overview of my technical skills.</p>
+                </div>
+                <div class="grid grid-cols-1 gap-8 lg:grid-cols-2">
+                    <!-- Hard Skills -->
+                    <div class="rounded-2xl bg-white p-6 shadow-md border border-gray-200">
+                        <h3 class="mb-6 text-xl font-semibold text-gray-800">Hard Skills</h3>
+                        <div class="space-y-6">
+                            <div>
+                                <div class="mb-2 flex justify-between">
+                                    <span class="font-medium text-gray-700">HTML</span>
+                                    <span class="text-sm text-gray-500">95%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-bar-fill" data-width="95%" style="width: 0%;"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="mb-2 flex justify-between">
+                                    <span class="font-medium text-gray-700">CSS</span>
+                                    <span class="text-sm text-gray-500">90%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-bar-fill" data-width="90%" style="width: 0%;"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="mb-2 flex justify-between">
+                                    <span class="font-medium text-gray-700">JavaScript</span>
+                                    <span class="text-sm text-gray-500">85%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-bar-fill" data-width="85%" style="width: 0%;"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="mb-2 flex justify-between">
+                                    <span class="font-medium text-gray-700">Python / Flask</span>
+                                    <span class="text-sm text-gray-500">90%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-bar-fill" data-width="90%" style="width: 0%;"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="mb-2 flex justify-between">
+                                    <span class="font-medium text-gray-700">Next.js</span>
+                                    <span class="text-sm text-gray-500">80%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-bar-fill" data-width="80%" style="width: 0%;"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="mb-2 flex justify-between">
+                                    <span class="font-medium text-gray-700">MongoDB / MySQL</span>
+                                    <span class="text-sm text-gray-500">85%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-bar-fill" data-width="85%" style="width: 0%;"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="mb-2 flex justify-between">
+                                    <span class="font-medium text-gray-700">PHP / Laravel</span>
+                                    <span class="text-sm text-gray-500">80%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-bar-fill" data-width="80%" style="width: 0%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Soft Skills -->
+                    <div class="rounded-2xl bg-white p-6 shadow-md border border-gray-200">
+                        <h3 class="mb-6 text-xl font-semibold text-gray-800">Soft Skills</h3>
+                        <div class="grid grid-cols-2 gap-6 mt-4">
+                            <!-- Skill 1 -->
+                            <div class="flex flex-col items-center">
+                                <div class="relative w-32 h-32 mb-4 mt-4 circular-progress">
+                                    <svg class="w-full h-full" viewBox="0 0 140 140">
+                                        <circle cx="70" cy="70" r="64" fill="none" class="stroke-primary/10"
+                                            stroke-width="12" />
+                                        <circle cx="70" cy="70" r="64" fill="none" class="stroke-primary"
+                                            stroke-width="12" stroke-linecap="round" stroke-dasharray="402.124"
+                                            stroke-dashoffset="0" transform="rotate(-90 70 70)" />
+                                        <text x="50%" y="50%" text-anchor="middle" dy=".3em"
+                                            class="text-2xl fill-current text-gray-700">88%</text>
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-medium text-gray-700">Problem Solving</h3>
+                            </div>
+
+                            <!-- Skill 2 -->
+                            <div class="flex flex-col items-center">
+                                <div class="relative w-32 h-32 mb-4 mt-4 circular-progress">
+                                    <svg class="w-full h-full" viewBox="0 0 140 140">
+                                        <circle cx="70" cy="70" r="64" fill="none" class="stroke-primary/10"
+                                            stroke-width="12" />
+                                        <circle cx="70" cy="70" r="64" fill="none" class="stroke-primary"
+                                            stroke-width="12" stroke-linecap="round" stroke-dasharray="402.124"
+                                            stroke-dashoffset="0" transform="rotate(-90 70 70)" />
+                                        <text x="50%" y="50%" text-anchor="middle" dy=".3em"
+                                            class="text-2xl fill-current text-gray-700">90%</text>
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-medium text-gray-700">Team Work</h3>
+                            </div>
+
+                            <!-- Skill 3 -->
+                            <div class="flex flex-col items-center">
+                                <div class="relative w-32 h-32 mb-4 mt-4 circular-progress">
+                                    <svg class="w-full h-full" viewBox="0 0 140 140">
+                                        <circle cx="70" cy="70" r="64" fill="none" class="stroke-primary/10"
+                                            stroke-width="12" />
+                                        <circle cx="70" cy="70" r="64" fill="none" class="stroke-primary"
+                                            stroke-width="12" stroke-linecap="round" stroke-dasharray="402.124"
+                                            stroke-dashoffset="0" transform="rotate(-90 70 70)" />
+                                        <text x="50%" y="50%" text-anchor="middle" dy=".3em"
+                                            class="text-2xl fill-current text-gray-700">95%</text>
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-medium text-gray-700">Time Management</h3>
+                            </div>
+
+                            <!-- Skill 4 -->
+                            <div class="flex flex-col items-center">
+                                <div class="relative w-32 h-32 mb-4 mt-4 circular-progress">
+                                    <svg class="w-full h-full" viewBox="0 0 140 140">
+                                        <circle cx="70" cy="70" r="64" fill="none" class="stroke-primary/10"
+                                            stroke-width="12" />
+                                        <circle cx="70" cy="70" r="64" fill="none" class="stroke-primary"
+                                            stroke-width="12" stroke-linecap="round" stroke-dasharray="402.124"
+                                            stroke-dashoffset="0" transform="rotate(-90 70 70)" />
+                                        <text x="50%" y="50%" text-anchor="middle" dy=".3em"
+                                            class="text-2xl fill-current text-gray-700">85%</text>
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-medium text-gray-700">Communication</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Technologies -->
+                <div class="mt-12 rounded-2xl bg-white p-6 shadow-md">
+                    <h3 class="mb-6 text-xl font-semibold text-gray-800 text-center">Technologies I Work With</h3>
+
+                    <div class="flex flex-wrap justify-center gap-12">
+                        <!-- HTML5 -->
+                        <div class="flex flex-col items-center">
+                            <div class="mb-2 flex h-16 w-16 items-center justify-center text-orange-600">
+                                <i class="fab fa-html5 text-5xl"></i>
+                            </div>
+                            <span class="text-sm font-medium">HTML5</span>
+                        </div>
+
+                        <!-- CSS3 -->
+                        <div class="flex flex-col items-center">
+                            <div class="mb-2 flex h-16 w-16 items-center justify-center text-blue-600">
+                                <i class="fab fa-css3-alt text-5xl"></i>
+                            </div>
+                            <span class="text-sm font-medium">CSS3</span>
+                        </div>
+
+                        <!-- JavaScript -->
+                        <div class="flex flex-col items-center">
+                            <div class="mb-2 flex h-16 w-16 items-center justify-center text-yellow-500">
+                                <i class="fab fa-js text-5xl"></i>
+                            </div>
+                            <span class="text-sm font-medium">JavaScript</span>
+                        </div>
+
+                        <!-- Bootstrap -->
+                        <div class="flex flex-col items-center">
+                            <div class="mb-2 flex h-16 w-16 items-center justify-center text-purple-600">
+                                <i class="fab fa-bootstrap text-5xl"></i>
+                            </div>
+                            <span class="text-sm font-medium">Bootstrap</span>
+                        </div>
+
+                        <!-- Tailwind CSS -->
+                        <div class="flex flex-col items-center">
+                            <div class="mb-2 flex h-16 w-16 items-center justify-center">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/1024px-Tailwind_CSS_Logo.svg.png"
+                                    class="h-10 w-10 object-contain" alt="Tailwind CSS"
+                                    onerror="this.onerror=null; this.parentElement.innerHTML='<i class=\'fas fa-wind text-4xl text-cyan-500\'></i>';">
+                            </div>
+                            <span class="text-sm font-medium">Tailwind</span>
+                        </div>
+
+                        <!-- Bulma -->
+                        <div class="flex flex-col items-center">
+                            <div class="mb-2 flex h-16 w-16 items-center justify-center">
+                                <img src="https://bulma.io/assets/brand/Bulma%20Icon.svg"
+                                    class="h-10 w-10 object-contain" alt="Bulma"
+                                    onerror="this.onerror=null; this.parentElement.innerHTML='<i class=\'fab fa-css3-alt text-4xl text-[#00d1b2]\'></i>';">
+                            </div>
+                            <span class="text-sm font-medium">Bulma</span>
+                        </div>
+
+                        <!-- PHP -->
+                        <div class="flex flex-col items-center">
+                            <div class="mb-2 flex h-16 w-16 items-center justify-center text-indigo-700">
+                                <i class="fab fa-php text-5xl"></i>
+                            </div>
+                            <span class="text-sm font-medium">PHP</span>
+                        </div>
+
+                        <!-- Python -->
+                        <div class="flex flex-col items-center">
+                            <div class="mb-2 flex h-16 w-16 items-center justify-center text-blue-700">
+                                <i class="fab fa-python text-5xl"></i>
+                            </div>
+                            <span class="text-sm font-medium">Python</span>
+                        </div>
+
+                        <!-- React -->
+                        <div class="flex flex-col items-center">
+                            <div class="mb-2 flex h-16 w-16 items-center justify-center text-blue-500">
+                                <i class="fab fa-react text-5xl"></i>
+                            </div>
+                            <span class="text-sm font-medium">React</span>
+                        </div>
+
+                        <!-- Laravel -->
+                        <div class="flex flex-col items-center">
+                            <div class="mb-2 flex h-16 w-16 items-center justify-center text-red-600">
+                                <i class="fab fa-laravel text-5xl"></i>
+                            </div>
+                            <span class="text-sm font-medium">Laravel</span>
+                        </div>
+
+                        <!-- Flask -->
+                        <div class="flex flex-col items-center">
+                            <div class="mb-2 flex h-16 w-16 items-center justify-center">
+                                <img src="https://icon.icepanel.io/Technology/png-shadow-512/Flask.png"
+                                    class="h-12 w-12 object-contain" alt="Flask"
+                                    onerror="this.onerror=null; this.parentElement.innerHTML='<i class=\'fas fa-flask text-5xl text-gray-700\'></i>';">
+                            </div>
+                            <span class="text-sm font-medium">Flask</span>
+                        </div>
+
+                        <!-- Next.js -->
+                        <div class="flex flex-col items-center">
+                            <div class="mb-2 flex h-16 w-16 items-center justify-center">
+                                <img src="https://icon.icepanel.io/Technology/png-shadow-512/Next.js.png"
+                                    class="h-12 w-12 object-contain" alt="Next.js"
+                                    onerror="this.onerror=null; this.parentElement.innerHTML='<i class=\'fab fa-js text-5xl text-gray-900\'></i>';">
+                            </div>
+                            <span class="text-sm font-medium">Next.js</span>
+                        </div>
+
+                        <!-- MySQL -->
+                        <div class="flex flex-col items-center">
+                            <div class="mb-2 flex h-16 w-16 items-center justify-center">
+                                <img src="https://icon.icepanel.io/Technology/svg/MySQL.svg"
+                                    class="h-12 w-12 object-contain" alt="MySQL"
+                                    onerror="this.onerror=null; this.parentElement.innerHTML='<i class=\'fas fa-database text-5xl text-blue-700\'></i>';">
+                            </div>
+                            <span class="text-sm font-medium">MySQL</span>
+                        </div>
+
+                        <!-- MongoDB -->
+                        <div class="flex flex-col items-center">
+                            <div class="mb-2 flex h-16 w-16 items-center justify-center">
+                                <img src="https://images.icon-icons.com/2699/PNG/512/mongodb_logo_icon_170943.png"
+                                    class="h-16 w-16 object-contain" alt="MongoDB"
+                                    onerror="this.onerror=null; this.parentElement.innerHTML='<i class=\'fas fa-database text-5xl text-green-600\'></i>';">
+                            </div>
+                            <span class="text-sm font-medium">MongoDB</span>
+                        </div>
+
+                        <!-- WordPress -->
+                        <div class="flex flex-col items-center">
+                            <div class="mb-2 flex h-16 w-16 items-center justify-center text-blue-700">
+                                <i class="fab fa-wordpress-simple text-5xl"></i>
+                            </div>
+                            <span class="text-sm font-medium">WordPress</span>
+                        </div>
+
+                        <!-- GitHub -->
+                        <div class="flex flex-col items-center">
+                            <div class="mb-2 flex h-16 w-16 items-center justify-center text-gray-900">
+                                <i class="fab fa-github text-5xl"></i>
+                            </div>
+                            <span class="text-sm font-medium">GitHub</span>
+                        </div>
+
+                        <!-- Git -->
+                        <div class="flex flex-col items-center">
+                            <div class="mb-2 flex h-16 w-16 items-center justify-center text-orange-600">
+                                <i class="fab fa-git-alt text-5xl"></i>
+                            </div>
+                            <span class="text-sm font-medium">Git</span>
+                        </div>
+
+                        <!-- Microsoft Word -->
+                        <div class="flex flex-col items-center">
+                            <div class="mb-2 flex h-16 w-16 items-center justify-center">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Microsoft_Office_Word_%282019%E2%80%93present%29.svg/1024px-Microsoft_Office_Word_%282019%E2%80%93present%29.svg.png"
+                                    class="w-11 h-11 object-contain" alt="Word"
+                                    onerror="this.onerror=null; this.parentElement.innerHTML='<i class=\'fas fa-file-word text-3xl text-blue-700\'></i>';">
+                            </div>
+                            <span class="text-sm font-medium">Word</span>
+                        </div>
+
+                        <!-- Microsoft Excel -->
+                        <div class="flex flex-col items-center">
+                            <div class="mb-2 flex h-16 w-16 items-center justify-center">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Microsoft_Office_Excel_%282019%E2%80%93present%29.svg/1024px-Microsoft_Office_Excel_%282019%E2%80%93present%29.svg.png"
+                                    class="w-11 h-11 object-contain" alt="Excel"
+                                    onerror="this.onerror=null; this.parentElement.innerHTML='<i class=\'fas fa-file-excel text-3xl text-green-700\'></i>';">
+                            </div>
+                            <span class="text-sm font-medium">Excel</span>
+                        </div>
+
+                        <!-- Microsoft PowerPoint -->
+                        <div class="flex flex-col items-center">
+                            <div class="mb-2 flex h-16 w-16 items-center justify-center">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Microsoft_Office_PowerPoint_%282019%E2%80%93present%29.svg/1024px-Microsoft_Office_PowerPoint_%282019%E2%80%93present%29.svg.png"
+                                    class="w-11 h-11 object-contain" alt="PowerPoint"
+                                    onerror="this.onerror=null; this.parentElement.innerHTML='<i class=\'fas fa-file-powerpoint text-3xl text-orange-700\'></i>';">
+                            </div>
+                            <span class="text-sm font-medium">PowerPoint</span>
+                        </div>
+
+                        <!-- Power BI -->
+                        <div class="flex flex-col items-center">
+                            <div class="mb-2 flex h-16 w-16 items-center justify-center">
+                                <img src="https://images.seeklogo.com/logo-png/43/2/power-bi-icon-logo-png_seeklogo-439962.png"
+                                    class="h-12 w-12 object-contain" alt="Power BI"
+                                    onerror="this.onerror=null; this.parentElement.innerHTML='<i class=\'fas fa-chart-line text-4xl text-yellow-600\'></i>';">
+                            </div>
+                            <span class="text-sm font-medium">Power BI</span>
+                        </div>
+
+                        <!-- Jupeter Notebook
+                        <div class="flex flex-col items-center">
+                            <div class="mb-2 flex h-16 w-16 items-center justify-center">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Jupyter_logo.svg/1200px-Jupyter_logo.svg.png"
+                                    class="h-12 w-12 object-contain" alt="Jupyter Notebook"
+                                    onerror="this.onerror=null; this.parentElement.innerHTML='<i class=\'fas fa-chart-line text-4xl text-yellow-600\'></i>';">
+                            </div>
+                            <span class="text-sm font-medium">Jupyter Notebook</span>
+                        </div> -->
+
+                        <!-- Figma -->
+                        <div class="flex flex-col items-center">
+                            <div class="mb-2 flex h-16 w-16 items-center justify-center text-purple-600">
+                                <i class="fab fa-figma text-5xl"></i>
+                            </div>
+                            <span class="text-sm font-medium">Figma</span>
+                        </div>
+
+                        <!-- Canva -->
+                        <div class="flex flex-col items-center">
+                            <div class="mb-2 flex h-16 w-16 items-center justify-center">
+                                <img src="https://freepnglogo.com/images/all_img/1691829400logo-canva-png.png"
+                                    class="h-12 w-12 object-contain" alt="Canva"
+                                    onerror="this.onerror=null; this.parentElement.innerHTML='<i class=\'fas fa-paint-brush text-4xl text-teal-500\'></i>';">
+                            </div>
+                            <span class="text-sm font-medium">Canva</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Achievements Section -->
+            <section id="achievements" class="relative min-h-screen overflow-hidden py-16 px-0 md:px-16">
+                <div class="mb-12 text-center">
+                    <h2 class="text-3xl font-bold mb-2">Achievements</h2>
+                    <div class="h-1 w-24 bg-primary mx-auto"></div>
+                    <p class="text-gray-400 mt-4 max-w-2xl mx-auto">A collection of my notable achievements, awards, and
+                        recognition throughout my career journey.</p>
+                </div>
+                <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+                    <!-- Certificate 1 -->
+                    <div
+                        class="group relative overflow-hidden rounded-2xl bg-white shadow-lg transition-all duration-300 hover:shadow-xl flex flex-col h-full">
+                        <!-- Card Image with Hover Effect -->
+                        <div class="relative h-56 w-full overflow-hidden">
+                            <img src="/static/achievement/power BI.jpg" alt="Power BI Certificate"
+                                class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105">
+                            <!-- Gradient Overlay -->
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/5 to-transparent"></div>
+                        </div>
+
+                        <!-- Card Content -->
+                        <div class="p-6">
+                            <!-- Category Tag -->
+                            <span
+                                class="mb-2 inline-block rounded-full bg-blue-100 px-3 py-1 text-xs font-semibold text-primary">
+                                Competency Certificate
+                            </span>
+
+                            <!-- Title -->
+                            <h3 class="mb-2 text-xl font-bold text-gray-800">Data Visualization with Power BI</h3>
+
+                            <!-- Organization and Date -->
+                            <div class="mb-4 flex items-center space-x-2 text-sm text-gray-500">
+                                <i class="fas fa-building text-blue-500"></i>
+                                <span>PT. MariBelajar Indonesia Cerdas</span>
+                                <span class="text-gray-300">•</span>
+                                <i class="far fa-calendar-alt"></i>
+                                <span>2024</span>
+                            </div>
+
+                            <!-- Description -->
+                            <p class="mb-6 text-gray-600 line-clamp-2">
+                                Certificate of competency in using Microsoft Power BI for data analysis and
+                                visualization.
+                            </p>
+
+                            <!-- View Button with Icon -->
+                            <a href="#"
+                                class="view-certificate group/button inline-flex items-center font-medium text-primary hover:text-primary/80">
+                                <span>View Certificate</span>
+                                <i
+                                    class="ri-arrow-right-line ml-2 transition-transform group-hover/button:translate-x-1"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Certificate 2 -->
+                    <div
+                        class="group relative overflow-hidden rounded-2xl bg-white shadow-lg transition-all duration-300 hover:shadow-xl flex flex-col h-full">
+                        <!-- Card Image with Hover Effect -->
+                        <div class="relative h-56 w-full overflow-hidden">
+                            <img src="/static/achievement/AI Engineer.jpg" alt="AI Engineer Certificate"
+                                class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105">
+                            <!-- Gradient Overlay -->
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/5 to-transparent"></div>
+                        </div>
+
+                        <!-- Card Content -->
+                        <div class="p-6">
+                            <!-- Category Tag -->
+                            <span
+                                class="mb-2 inline-block rounded-full bg-blue-100 px-3 py-1 text-xs font-semibold text-primary">
+                                Competency Certificate
+                            </span>
+
+                            <!-- Title -->
+                            <h3 class="mb-2 text-xl font-bold text-gray-800">AI Engineer</h3>
+
+                            <!-- Organization and Date -->
+                            <div class="mb-4 flex items-center space-x-2 text-sm text-gray-500">
+                                <i class="fas fa-building text-blue-500"></i>
+                                <span>PT. MariBelajar Indonesia Cerdas</span>
+                                <span class="text-gray-300">•</span>
+                                <i class="far fa-calendar-alt"></i>
+                                <span>2024</span>
+                            </div>
+
+                            <!-- Description -->
+                            <p class="mb-6 text-gray-600 line-clamp-2">
+                                Certified in developing and deploying AI solutions on Microsoft Azure, including Azure
+                                Machine Learning, Cognitive Services, and Azure Bot Services. Proficient in building
+                                intelligent applications using Azure's AI platform.
+                            </p>
+
+                            <!-- View Button with Icon -->
+                            <a href="#"
+                                class="view-certificate group/button inline-flex items-center font-medium text-primary hover:text-primary/80">
+                                <span>View Certificate</span>
+                                <i
+                                    class="ri-arrow-right-line ml-2 transition-transform group-hover/button:translate-x-1"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Certificate 3 -->
+                    <div
+                        class="group relative overflow-hidden rounded-2xl bg-white shadow-lg transition-all duration-300 hover:shadow-xl flex flex-col h-full">
+                        <!-- Card Image with Hover Effect -->
+                        <div class="relative h-56 w-full overflow-hidden">
+                            <img src="/static/achievement/Python.jpg" alt="Data Fundamental Certificate"
+                                class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105">
+                            <!-- Gradient Overlay -->
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/5 to-transparent"></div>
+                        </div>
+
+                        <!-- Card Content -->
+                        <div class="p-6">
+                            <!-- Category Tag -->
+                            <span
+                                class="mb-2 inline-block rounded-full bg-blue-100 px-3 py-1 text-xs font-semibold text-primary">
+                                Competency Certificate
+                            </span>
+
+                            <!-- Title -->
+                            <h3 class="mb-2 text-xl font-bold text-gray-800">Data Analysis with Python</h3>
+
+                            <!-- Organization and Date -->
+                            <div class="mb-4 flex items-center space-x-2 text-sm text-gray-500">
+                                <i class="fas fa-building text-blue-500"></i>
+                                <span>PT. MariBelajar Indonesia Cerdas</span>
+                                <span class="text-gray-300">•</span>
+                                <i class="far fa-calendar-alt"></i>
+                                <span>2024</span>
+                            </div>
+
+                            <!-- Description -->
+                            <p class="mb-6 text-gray-600 line-clamp-2">
+                                Gained fundamental knowledge in data analysis using Python, including data
+                                manipulation with Pandas, data visualization with Matplotlib/Seaborn, and basic
+                                statistical analysis.
+                            </p>
+
+                            <!-- View Button with Icon -->
+                            <a href="#"
+                                class="view-certificate group/button inline-flex items-center font-medium text-primary hover:text-primary/80">
+                                <span>View Certificate</span>
+                                <i
+                                    class="ri-arrow-right-line ml-2 transition-transform group-hover/button:translate-x-1"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Certificate 4 -->
+                    <div
+                        class="group relative overflow-hidden rounded-2xl bg-white shadow-lg transition-all duration-300 hover:shadow-xl flex flex-col h-full">
+                        <!-- Card Image with Hover Effect -->
+                        <div class="relative h-56 w-full overflow-hidden">
+                            <img src="/static/achievement/Data Fundamental.jpg" alt="Data Fundamental Certificate"
+                                class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105">
+                            <!-- Gradient Overlay -->
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/5 to-transparent"></div>
+                        </div>
+
+                        <!-- Card Content -->
+                        <div class="p-6">
+                            <!-- Category Tag -->
+                            <span
+                                class="mb-2 inline-block rounded-full bg-blue-100 px-3 py-1 text-xs font-semibold text-primary">
+                                Competency Certificate
+                            </span>
+
+                            <!-- Title -->
+                            <h3 class="mb-2 text-xl font-bold text-gray-800">Data Fundamental
+                            </h3>
+
+                            <!-- Organization and Date -->
+                            <div class="mb-4 flex items-center space-x-2 text-sm text-gray-500">
+                                <i class="fas fa-building text-blue-500"></i>
+                                <span>PT. MariBelajar Indonesia Cerdas</span>
+                                <span class="text-gray-300">•</span>
+                                <i class="far fa-calendar-alt"></i>
+                                <span>2024</span>
+                            </div>
+
+                            <!-- Description -->
+                            <p class="mb-6 text-gray-600 line-clamp-2">
+                                Learned core data fundamentals including data types, structures, and basic data
+                                processing techniques. Gained understanding of data collection, cleaning, and
+                                preparation methods essential for effective data analysis and interpretation.
+                            </p>
+
+                            <!-- View Button with Icon -->
+                            <a href="#"
+                                class="view-certificate group/button inline-flex items-center font-medium text-primary hover:text-primary/80">
+                                <span>View Certificate</span>
+                                <i
+                                    class="ri-arrow-right-line ml-2 transition-transform group-hover/button:translate-x-1"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Certificate 5 -->
+                    <div
+                        class="group relative overflow-hidden rounded-2xl bg-white shadow-lg transition-all duration-300 hover:shadow-xl flex flex-col h-full">
+                        <!-- Card Image with Hover Effect -->
+                        <div class="relative h-56 w-full overflow-hidden">
+                            <img src="/static/achievement/Kreativitas.jpg" alt="Kreativitas Certificate"
+                                class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105">
+                            <!-- Gradient Overlay -->
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/5 to-transparent"></div>
+                        </div>
+
+                        <!-- Card Content -->
+                        <div class="p-6">
+                            <!-- Category Tag -->
+                            <span
+                                class="mb-2 inline-block rounded-full bg-blue-100 px-3 py-1 text-xs font-semibold text-primary">
+                                Competency Certificate
+                            </span>
+
+                            <!-- Title -->
+                            <h3 class="mb-2 text-xl font-bold text-gray-800">Creativity and Critical Thinking</h3>
+
+                            <!-- Organization and Date -->
+                            <div class="mb-4 flex items-center space-x-2 text-sm text-gray-500">
+                                <i class="fas fa-building text-blue-500"></i>
+                                <span>PT. MariBelajar Indonesia Cerdas</span>
+                                <span class="text-gray-300">•</span>
+                                <i class="far fa-calendar-alt"></i>
+                                <span>2024</span>
+                            </div>
+
+                            <!-- Description -->
+                            <p class="mb-6 text-gray-600 line-clamp-2">
+                                Enhanced ability to think outside the box while maintaining analytical rigor. Gained
+                                skills in generating innovative ideas, evaluating information critically, and making
+                                well-reasoned decisions in complex situations.
+                            </p>
+
+                            <!-- View Button with Icon -->
+                            <a href="#"
+                                class="view-certificate group/button inline-flex items-center font-medium text-primary hover:text-primary/80">
+                                <span>View Certificate</span>
+                                <i
+                                    class="ri-arrow-right-line ml-2 transition-transform group-hover/button:translate-x-1"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Certificate 6 -->
+                    <div
+                        class="group relative overflow-hidden rounded-2xl bg-white shadow-lg transition-all duration-300 hover:shadow-xl flex flex-col h-full">
+                        <div
+                            class="group relative overflow-hidden rounded-2xl bg-white shadow-lg transition-all duration-300 hover:shadow-xl flex flex-col h-full">
+                            <!-- Card Image with Hover Effect -->
+                            <div class="relative h-56 w-full overflow-hidden">
+                                <img src="/static/achievement/Manajemen Proyek.jpg" alt="Manajemen Proyek Certificate"
+                                    class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105">
+                                <!-- Gradient Overlay -->
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/5 to-transparent"></div>
+                            </div>
+
+                            <!-- Card Content -->
+                            <div class="p-6">
+                                <!-- Category Tag -->
+                                <span
+                                    class="mb-2 inline-block rounded-full bg-blue-100 px-3 py-1 text-xs font-semibold text-primary">
+                                    Competency Certificate
+                                </span>
+
+                                <!-- Title -->
+                                <h3 class="mb-2 text-xl font-bold text-gray-800">Project Management and IT</h3>
+
+                                <!-- Organization and Date -->
+                                <div class="mb-4 flex items-center space-x-2 text-sm text-gray-500">
+                                    <i class="fas fa-building text-blue-500"></i>
+                                    <span>PT. MariBelajar Indonesia Cerdas</span>
+                                    <span class="text-gray-300">•</span>
+                                    <i class="far fa-calendar-alt"></i>
+                                    <span>2024</span>
+                                </div>
+
+                                <!-- Description -->
+                                <p class="mb-6 text-gray-600 line-clamp-2">
+                                    Acquired comprehensive knowledge of IT project management methodologies including
+                                    Agile and Waterfall. Developed skills in project planning, scheduling, risk
+                                    management, and stakeholder communication specific to IT projects. Learned to manage
+                                    project scope, budget, and resources effectively.
+                                </p>
+
+                                <!-- View Button with Icon -->
+                                <a href="#"
+                                    class="view-certificate group/button inline-flex items-center font-medium text-primary hover:text-primary/80">
+                                    <span>View Certificate</span>
+                                    <i
+                                        class="ri-arrow-right-line ml-2 transition-transform group-hover/button:translate-x-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Certificate 7 -->
+                    <div
+                        class="group relative overflow-hidden rounded-2xl bg-white shadow-lg transition-all duration-300 hover:shadow-xl flex flex-col h-full hidden">
+                        <!-- Ribbon for Achievement Badge -->
+                        <div
+                            class="absolute -right-10 top-6 z-10 w-40 rotate-45 transform bg-yellow-400 py-1 text-center text-xs font-bold uppercase tracking-wider text-gray-900">
+                            2nd Place
+                        </div>
+
+                        <!-- Card Image with Hover Effect -->
+                        <div class="relative h-56 w-full overflow-hidden">
+                            <img src="/static/achievement/juara_programing.png" alt="Web Programming Competition"
+                                class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105">
+                            <!-- Gradient Overlay -->
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/5 to-transparent"></div>
+                        </div>
+
+                        <!-- Card Content -->
+                        <div class="p-6">
+                            <!-- Category Tag -->
+                            <span
+                                class="mb-2 inline-block rounded-full bg-blue-100 px-3 py-1 text-xs font-semibold text-primary">
+                                Competition Certificate
+                            </span>
+
+                            <!-- Title -->
+                            <h3 class="mb-2 text-xl font-bold text-gray-800">2nd Place Web Programming</h3>
+
+                            <!-- Organization and Date -->
+                            <div class="mb-4 flex items-center space-x-2 text-sm text-gray-500">
+                                <i class="fas fa-trophy text-yellow-500"></i>
+                                <span>Supremasi Competition</span>
+                                <span class="text-gray-300">•</span>
+                                <i class="far fa-calendar-alt"></i>
+                                <span>2025</span>
+                            </div>
+
+                            <!-- Description -->
+                            <p class="mb-6 text-gray-600 line-clamp-2">
+                                Achieved 2nd place in the prestigious Supremasi web programming competition,
+                                showcasing
+                                expertise in modern web technologies and problem-solving skills.
+                            </p>
+
+                            <!-- View Button with Icon -->
+                            <a href="#"
+                                class="view-certificate group/button inline-flex items-center font-medium text-primary hover:text-primary/80">
+                                <span>View Certificate</span>
+                                <i
+                                    class="ri-arrow-right-line ml-2 transition-transform group-hover/button:translate-x-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Certificate Modal -->
+                <div id="certificateModal"
+                    class="fixed inset-0 z-50 hidden items-center justify-center bg-black/80 p-4">
+                    <div class="relative max-w-4xl bg-white rounded-lg shadow-2xl max-h-[90vh] overflow-y-auto">
+                        <button id="closeModal"
+                            class="absolute right-4 top-4 z-10 rounded-full bg-white/80 p-2 text-gray-800 hover:bg-gray-200">
+                            <i class="ri-close-line text-xl"></i>
+                        </button>
+                        <img id="modalImage" src="" alt="Certificate" class="w-full h-auto">
+                    </div>
+                </div>
+
+                <!-- View All Button -->
+                <div class="mt-12 text-center">
+                    <button id="viewAllAchievementsBtn"
+                        class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-primary/90 transition-colors duration-300">
+                        View All Achievements
+                        <svg class="ml-2 -mr-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                </div>
+            </section>
+
+            <!-- Resume Section -->
+            <section id="resume" class="relative min-h-screen overflow-hidden py-16 px-0 md:px-16">
+                <div class="max-w-6xl mx-auto">
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl font-bold mb-4">Resume</h2>
+                        <div class="w-20 h-1 bg-primary mx-auto mb-4"></div>
+                        <p class="text-gray-600 max-w-2xl mx-auto">My professional journey, education, and work
+                            experience.</p>
+                    </div>
+
+                    <div class="flex flex-col md:flex-row gap-12">
+                        <!-- Left Sidebar -->
+                        <div class="w-full md:w-1/3">
+                            <div class="bg-white rounded-lg shadow-lg border border-gray-200 p-6">
+                                <div class="text-center mb-6">
+                                    <div
+                                        class="w-32 h-32 rounded-full overflow-hidden mx-auto mb-4 border-2 border-primary">
+                                        <img src="/static/images/home.png">
+                                    </div>
+                                    <h3 class="text-xl font-semibold">I Kadek Dwi Adnyana</h3>
+                                    <p class="text-gray-600">Web Developer</p>
+                                </div>
+
+                                <div class="space-y-4">
+                                    <div>
+                                        <h4 class="font-medium mb-2">Contact Information</h4>
+                                        <ul class="space-y-2 text-gray-600">
+                                            <li class="flex items-center">
+                                                <div class="w-5 h-5 flex items-center justify-center mr-2 text-primary">
+                                                    <i class="ri-mail-line"></i>
+                                                </div>
+                                                <span>dwiadnyanaa04@gmail.com</span>
+                                            </li>
+                                            <li class="flex items-center">
+                                                <div class="w-5 h-5 flex items-center justify-center mr-2 text-primary">
+                                                    <i class="ri-phone-line"></i>
+                                                </div>
+                                                <span>+62 815-2980-8370</span>
+                                            </li>
+                                            <li class="flex items-center">
+                                                <div class="w-5 h-5 flex items-center justify-center mr-2 text-primary">
+                                                    <i class="ri-map-pin-line"></i>
+                                                </div>
+                                                <span>Tabanan, Bali, Indonesia</span>
+                                            </li>
+                                            <li class="flex items-center">
+                                                <div class="w-5 h-5 flex items-center justify-center mr-2 text-primary">
+                                                    <i class="ri-linkedin-box-line"></i>
+                                                </div>
+                                                <span>linkedin.com/in/dwiadnyana04</span>
+                                            </li>
+                                            <li class="flex items-center">
+                                                <div class="w-5 h-5 flex items-center justify-center mr-2 text-primary">
+                                                    <i class="ri-github-line"></i>
+                                                </div>
+                                                <span>github.com/Dekguss</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div>
+                                        <h4 class="font-medium mb-2">Languages</h4>
+                                        <ul class="space-y-2 text-gray-600">
+                                            <li class="flex justify-between items-center">
+                                                <span>Indonesia</span>
+                                                <span>Native</span>
+                                            </li>
+                                            <li class="flex justify-between items-center">
+                                                <span>English</span>
+                                                <span>Intermediate</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="mt-8">
+                                    <a href="/static/CV-I Kadek Dwi Adnyana.pdf" download="CV-I Kadek Dwi Adnyana.pdf"
+                                        class="inline-flex items-center justify-center w-full px-6 py-3 bg-primary text-white rounded-button hover:bg-primary/90 transition-colors whitespace-nowrap">
+                                        <div class="w-5 h-5 flex items-center justify-center mr-2">
+                                            <i class="ri-download-line"></i>
+                                        </div>
+                                        <span>Download CV</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right Sidebar -->
+                        <div class="w-full md:w-2/3">
+                            <!-- Education -->
+                            <div class="mb-12">
+                                <h3 class="text-xl font-semibold mb-6 flex items-center">
+                                    <div class="w-8 h-8 flex items-center justify-center mr-2 text-primary">
+                                        <i class="fas fa-graduation-cap text-xl"></i>
+                                    </div>
+                                    <span>Education</span>
+                                </h3>
+
+                                <div class="relative pl-10 timeline">
+                                    <div class="mb-8 relative timeline-item">
+                                        <div class="flex items-start">
+                                            <img src="/static/images/logo-unud.png" alt="Udayana University Logo"
+                                                class="w-16 h-16 object-contain mr-4 mt-1">
+                                            <div>
+                                                <h4 class="text-lg font-medium">Bachelor of Computer Science</h4>
+                                                <p class="text-primary mb-1">Udayana University</p>
+                                                <div class="flex items-center text-gray-500 text-sm mb-2">
+                                                    <span>2021 - 2025</span>
+                                                    <span class="mx-2">•</span>
+                                                    <span>GPA: 3.96/4.00</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="text-gray-600">Focused on Web Development, UI/UX Design, and
+                                            Data Analyst.
+                                            Studying modern web development, user interface design principles,
+                                            and data analysis/visualization techniques. Developing skills in
+                                            building engaging, functional, and data-driven web applications.</p>
+                                    </div>
+
+                                    <div class="mb-8 relative timeline-item">
+                                        <div class="flex items-start">
+                                            <img src="/static/images/logo-sma.png" alt="SMA Logo"
+                                                class="w-16 h-16 object-contain mr-4 mt-1">
+                                            <div>
+                                                <h4 class="text-lg font-medium">Senior High School - MIPA</h4>
+                                                <p class="text-primary mb-1">SMA Negeri 1 Penebel</p>
+                                                <div class="flex items-center text-gray-500 text-sm mb-2">
+                                                    <span>2018 - 2021</span>
+                                                    <!-- <span class="mx-2">•</span>
+                                                    <span>GPA: 3.85/4.00</span> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="text-gray-600">
+                                            Specialized in Mathematics and Natural Sciences (MIPA) with a strong
+                                            foundation in analytical thinking,
+                                            problem-solving, and scientific methodology. Developed skills in
+                                            mathematics, physics, chemistry, and biology,
+                                            which provided a solid base for logical reasoning and technical
+                                            understanding.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Work Experience -->
+                            <div>
+                                <h3 class="text-xl font-semibold mb-6 flex items-center">
+                                    <div class="w-8 h-8 flex items-center justify-center mr-2 text-primary">
+                                        <i class="fas fa-briefcase"></i>
+                                    </div>
+                                    <span>Work Experience</span>
+                                </h3>
+
+
+                                <div class="timeline pl-10">
+                                    <!-- Komisi Informasi Provinsi Bali -->
+                                    <div class="mb-8 relative timeline-item">
+                                        <h4 class="text-lg font-medium">Web Developer</h4>
+                                        <p class="text-primary mb-1">Komisi Informasi Provinsi Bali</p>
+                                        <p class="text-gray-500 text-sm mb-2">Jun 2023 - Aug 2023 | Denpasar, Bali</p>
+                                        <p class="text-gray-600 mb-2">Developed and maintained the official website
+                                            for Bali's Information Commission, focusing on user experience and
+                                            information accessibility for the public.</p>
+                                        <ul class="text-gray-600 space-y-2 pl-5">
+                                            <li class="relative pl-4">
+                                                <span class="absolute left-0 top-0 -ml-5">•</span>
+                                                <span class="block">Designed and developed the Komisi Informasi Provinsi
+                                                    Bali website
+                                                    using WordPress, ensuring responsive design and optimal
+                                                    performance</span>
+                                            </li>
+                                            <li class="relative pl-4">
+                                                <span class="absolute left-0 top-0 -ml-5">•</span>
+                                                <span class="block">Implemented key features including news management
+                                                    system, popup
+                                                    notifications, and dynamic running text for important
+                                                    announcements</span>
+                                            </li>
+                                            <li class="relative pl-4">
+                                                <span class="absolute left-0 top-0 -ml-5">•</span>
+                                                <span class="block">Conducted comprehensive testing and debugging to
+                                                    ensure
+                                                    website
+                                                    stability and security</span>
+                                            </li>
+                                            <li class="relative pl-4">
+                                                <span class="absolute left-0 top-0 -ml-5">•</span>
+                                                <span class="block">Provided training to staff members on content
+                                                    management
+                                                    and website
+                                                    maintenance</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- PT. Global Investment Institusi -->
+                                    <div class="mb-8 relative timeline-item">
+                                        <h4 class="text-lg font-medium">Full Stack Web Developer</h4>
+                                        <p class="text-primary mb-1">PT. Global Investment Institusi</p>
+                                        <p class="text-gray-500 text-sm mb-2">Aug 2023 - Dec 2023 | Jakarta Selatan</p>
+                                        <p class="text-gray-600 mb-2">Led the development of secure web applications
+                                            with a focus on robust backend functionality and clean, responsive
+                                            frontend design.</p>
+                                        <ul class="text-gray-600 space-y-2 pl-5">
+                                            <li class="relative pl-4">
+                                                <span class="absolute left-0 top-0 -ml-5">•</span>
+                                                <span class="block">Developed and maintained web applications using
+                                                    Flask
+                                                    framework with
+                                                    Python, implementing RESTful APIs</span>
+                                            </li>
+                                            <li class="relative pl-4">
+                                                <span class="absolute left-0 top-0 -ml-5">•</span>
+                                                <span class="block">Created responsive and intuitive user interfaces
+                                                    using
+                                                    Bulma CSS
+                                                    framework</span>
+                                            </li>
+                                            <li class="relative pl-4">
+                                                <span class="absolute left-0 top-0 -ml-5">•</span>
+                                                <span class="block">Enhanced application security by implementing JWT
+                                                    token-based
+                                                    authentication system</span>
+                                            </li>
+                                            <li class="relative pl-4">
+                                                <span class="absolute left-0 top-0 -ml-5">•</span>
+                                                <span class="block">Implemented secure password hashing and encryption
+                                                    using
+                                                    bcrypt for
+                                                    user data protection</span>
+                                            </li>
+                                            <li class="relative pl-4">
+                                                <span class="absolute left-0 top-0 -ml-5">•</span>
+                                                <span class="block">Deployed applications to Glitch platform, ensuring
+                                                    high
+                                                    availability
+                                                    and performance</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- PT. Maribelajar Indonesia Cerdas -->
+                                    <div class="relative timeline-item">
+                                        <h4 class="text-lg font-medium">Data Analyst and AI Specialist</h4>
+                                        <p class="text-primary mb-1">PT. Maribelajar Indonesia Cerdas</p>
+                                        <p class="text-gray-500 text-sm mb-2">Feb 2024 - Jun 2024 | Denpasar, Bali</p>
+                                        <p class="text-gray-600 mb-2">Specialized in data analysis and AI
+                                            implementation to drive data-informed decisions and develop intelligent
+                                            solutions.</p>
+                                        <ul class="text-gray-600 space-y-2 pl-5">
+                                            <li class="relative pl-4">
+                                                <span class="absolute left-0 top-0 -ml-5">•</span>
+                                                <span class="block">Performed data cleaning, analysis, and visualization
+                                                    using Python
+                                                    libraries including Pandas, NumPy, and Matplotlib</span>
+                                            </li>
+                                            <li class="relative pl-4">
+                                                <span class="absolute left-0 top-0 -ml-5">•</span>
+                                                <span class="block">Developed and deployed machine learning models using
+                                                    Scikit-Learn
+                                                    for predictive analytics</span>
+                                            </li>
+                                            <li class="relative pl-4">
+                                                <span class="absolute left-0 top-0 -ml-5">•</span>
+                                                <span class="block">Implemented AI solutions using Microsoft Azure
+                                                    services,
+                                                    including
+                                                    Azure Machine Learning Studio</span>
+                                            </li>
+                                            <li class="relative pl-4">
+                                                <span class="absolute left-0 top-0 -ml-5">•</span>
+                                                <span class="block">Created interactive dashboards and reports using
+                                                    Power
+                                                    BI for
+                                                    business intelligence</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact" class="relative min-h-screen overflow-hidden py-16 px-0 md:px-16">
+                <div class="mb-12 text-center">
+                    <h2 class="mb-2 text-lg font-medium text-primary">Get In Touch</h2>
+                    <h1 class="text-3xl font-bold text-gray-800 md:text-4xl">Contact Me</h1>
+                </div>
+                <div class="grid grid-cols-1 gap-8 lg:grid-cols-2">
+
+                    <!-- Contact Form -->
+                    <div class="rounded-2xl bg-white p-8 shadow-md border border-gray-200">
+                        <h3 class="mb-6 text-xl font-semibold text-gray-800">Send Me a Message</h3>
+                        <form id="contactForm" action="/send_email" method="POST" onsubmit="submitForm(event)">
+                            <div class="mb-4">
+                                <label for="name" class="mb-2 block text-sm font-medium text-gray-700">Your Name</label>
+                                <input type="text" id="name" name="name"
+                                    class="w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-gray-700 focus:border-primary focus:ring-0"
+                                    placeholder="Your Name" required>
+                            </div>
+                            <div class="mb-4">
+                                <label for="email" class="mb-2 block text-sm font-medium text-gray-700">Your
+                                    Email</label>
+                                <input type="email" id="email" name="email"
+                                    class="w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-gray-700 focus:border-primary focus:ring-0"
+                                    placeholder="example@gmail.com" required>
+                            </div>
+                            <div class="mb-4">
+                                <label for="subject"
+                                    class="mb-2 block text-sm font-medium text-gray-700">Subject</label>
+                                <input type="text" id="subject" name="subject"
+                                    class="w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-gray-700 focus:border-primary focus:ring-0"
+                                    placeholder="Subject">
+                            </div>
+                            <div class="mb-6">
+                                <label for="message"
+                                    class="mb-2 block text-sm font-medium text-gray-700">Message</label>
+                                <textarea id="message" name="message" rows="5"
+                                    class="w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-gray-700 focus:border-primary focus:ring-0"
+                                    placeholder="Your message here..." required></textarea>
+                            </div>
+                            <div class="mb-6 flex items-center">
+                                <input type="checkbox" id="consent" name="consent" class="custom-checkbox mr-2"
+                                    required>
+                                <label for="consent" class="text-sm text-gray-600">I agree to the processing of my
+                                    personal data.</label>
+                            </div>
+                            <div id="formMessage" class="mb-4 hidden rounded-md p-4"></div>
+                            <button type="submit" id="submitBtn"
+                                class="whitespace-nowrap !rounded-button w-full bg-primary px-6 py-3 font-medium text-white shadow-md transition hover:bg-primary/90">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Contact Information -->
+                    <div class="rounded-2xl bg-white p-8 shadow-md border border-gray-200">
+                        <h3 class="mb-6 text-xl font-semibold text-gray-800">Contact Information</h3>
+                        <div class="mb-8 space-y-4">
+                            <div class="flex items-start">
+                                <div
+                                    class="mr-4 flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary">
+                                    <i class="ri-map-pin-line ri-lg"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-sm font-semibold text-gray-700">Address</h4>
+                                    <p class="text-gray-600">Tabanan, Bali, Indonesia</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div
+                                    class="mr-4 flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary">
+                                    <i class="ri-mail-line ri-lg"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-sm font-semibold text-gray-700">Email</h4>
+                                    <p class="text-gray-600">dwiadnyanaa04@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div
+                                    class="mr-4 flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary">
+                                    <i class="ri-phone-line ri-lg"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-sm font-semibold text-gray-700">Phone</h4>
+                                    <p class="text-gray-600">+62 815-2980-8370</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div
+                                    class="mr-4 flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary">
+                                    <i class="ri-time-line ri-lg"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-sm font-semibold text-gray-700">Working Hours</h4>
+                                    <p class="text-gray-600">Monday - Friday, 8:00 AM - 6:00 PM WITA</p>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="mb-4 text-xl font-semibold text-gray-800">Follow Me</h3>
+                        <div class="flex space-x-3">
+                            <a href="https://www.linkedin.com/in/dwiadnyana04"
+                                class="flex h-12 w-12 items-center justify-center rounded-full bg-gray-100 text-gray-700 transition hover:bg-primary hover:text-white">
+                                <i class="ri-linkedin-fill ri-lg"></i>
+                            </a>
+                            <a href="https://github.com/Dekguss"
+                                class="flex h-12 w-12 items-center justify-center rounded-full bg-gray-100 text-gray-700 transition hover:bg-primary hover:text-white">
+                                <i class="ri-github-fill ri-lg"></i>
+                            </a>
+                            <a href="https://www.instagram.com/dwiiadnyana7"
+                                class="flex h-12 w-12 items-center justify-center rounded-full bg-gray-100 text-gray-700 transition hover:bg-primary hover:text-white">
+                                <i class="ri-instagram-fill ri-lg"></i>
+                            </a>
+                            <a href="https://www.tiktok.com/@_dwikk7"
+                                class="flex h-12 w-12 items-center justify-center rounded-full bg-gray-100 text-gray-700 transition hover:bg-primary hover:text-white">
+                                <i class="ri-tiktok-fill ri-lg"></i>
+                            </a>
+                        </div>
+                        <div class="mt-8">
+                            <h3 class="mb-4 text-xl font-semibold text-gray-800">Availability</h3>
+                            <div class="mb-4 flex items-center justify-between">
+                                <span class="font-medium text-gray-700">Available for freelance</span>
+                                <label class="custom-switch">
+                                    <input type="checkbox" checked>
+                                    <span class="switch-slider"></span>
+                                </label>
+                            </div>
+                            <p class="text-gray-600">I'm currently available for freelance work. Feel free to reach out
+                                if you have a project in mind.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer class="mt-16 border-t border-gray-200 py-8">
+                <div class="text-center">
+                    <h1 class="mb-4 font-['Pacifico'] text-2xl text-primary">I Kadek Dwi Adnyana</h1>
+                    <p class="mb-6 text-gray-600">Web Developer | UI/UX Designer | Data Analyst</p>
+                    <div class="mb-6 flex justify-center space-x-4">
+                        <a href="https://www.linkedin.com/in/dwiadnyana04"
+                            class="flex h-10 w-10 items-center justify-center rounded-full bg-gray-100 text-gray-700 hover:bg-primary hover:text-white">
+                            <i class="ri-linkedin-fill ri-lg"></i>
+                        </a>
+                        <a href="https://github.com/Dekguss"
+                            class="flex h-10 w-10 items-center justify-center rounded-full bg-gray-100 text-gray-700 hover:bg-primary hover:text-white">
+                            <i class="ri-github-fill ri-lg"></i>
+                        </a>
+                        <a href="https://www.instagram.com/dwiiadnyana7"
+                            class="flex h-10 w-10 items-center justify-center rounded-full bg-gray-100 text-gray-700 hover:bg-primary hover:text-white">
+                            <i class="ri-instagram-fill ri-lg"></i>
+                        </a>
+                    </div>
+                    <p class="text-sm text-gray-500">&copy; 2025 Dwi Adnyana. All rights reserved.</p>
+                </div>
+            </footer>
+        </main>
+    </div>
+
+    <div id="notification" class="fixed bottom-4 right-4 p-4 rounded-lg shadow-lg hidden z-50"
+        style="background-color: #4CAF50; color: white;">
+        <div class="flex items-center">
+            <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+            </svg>
+            <span id="notificationMessage">Message sent successfully!</span>
+        </div>
+    </div>
+</body>
+
+</html>

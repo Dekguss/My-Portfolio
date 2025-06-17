@@ -1,0 +1,342 @@
+/* 
+ * Gaya untuk ikon Remix Icons
+ * Menetapkan konten ikon default untuk elemen yang memiliki class dimulai dengan "ri-"
+ */
+:where([class^="ri-"])::before {
+    content: "\f3c2";
+}
+
+/* 
+ * Gaya dasar untuk body
+ * - Menggunakan font Poppins sebagai font utama
+ * - Mencegah scroll horizontal
+ */
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+/* 
+ * Komponen progress bar
+ * - Menentukan tinggi, border radius, dan warna dasar
+ */
+.progress-bar {
+    height: 8px;
+    border-radius: 4px;
+    background-color: #e5e7eb;
+    overflow: hidden;
+}
+
+/* 
+ * Bagian isi progress bar
+ * - Animasi transisi lebar selama 1 detik
+ * - Warna biru tua (#1e3a8a)
+ */
+.progress-bar-fill {
+    height: 100%;
+    border-radius: 4px;
+    background-color: #1e3a8a;
+    transition: width 1s ease-in-out;
+}
+
+/* 
+ * Komponen timeline
+ * - Bulatan di sebelah kiri item timeline
+ * - Posisi absolut dengan z-index untuk menutupi garis
+ */
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -38px;
+    top: 0;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #1e3a8a;
+    border: 3px solid white;
+    z-index: 1;
+}
+
+/* 
+ * Garis vertikal timeline
+ * - Menghubungkan antara item timeline
+ * - Posisi di sebelah kiri item
+ */
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    left: -31px;
+    top: 16px;
+    width: 2px;
+    height: calc(100% + 16px);
+    background-color: #e5e7eb;
+}
+
+/* 
+ * Menghilangkan garis vertikal di item terakhir timeline
+ */
+.timeline-item:last-child::after {
+    display: none;
+}
+
+/* 
+ * Gaya fokus untuk input dan textarea
+ * - Menghilangkan outline default
+ * - Menambahkan border biru saat fokus
+ */
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #1e3a8a;
+}
+
+/* 
+ * Checkbox kustom
+ * - Menghilangkan tampilan default browser
+ * - Desain custom dengan transisi halus
+ */
+.custom-checkbox {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #1e3a8a;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+}
+
+/* 
+ * Tampilan checkbox saat dicentang
+ * - Background biru tua
+ * - Menampilkan centang putih
+ */
+.custom-checkbox:checked {
+    background-color: #1e3a8a;
+}
+
+/* 
+ * Membuat tanda centang dengan CSS
+ * - Menggunakan pseudo-element ::after
+ * - Rotasi 45 derajat untuk membentuk centang
+ */
+.custom-checkbox:checked::after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 6px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+/* 
+ * Switch toggle
+ * - Membungkus input switch
+ * - Posisi relatif untuk penempatan absolut anaknya
+ */
+.custom-switch {
+    position: relative;
+    display: inline-block;
+    width: 44px;
+    height: 24px;
+}
+
+/* 
+ * Menyembunyikan input asli
+ */
+.custom-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* 
+ * Tampilan slider switch
+ * - Background abu-abu saat tidak aktif
+ * - Transisi halus untuk animasi
+ */
+.switch-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #e5e7eb;
+    transition: .4s;
+    border-radius: 24px;
+}
+
+/* 
+ * Bulatan pada switch
+ * - Posisi di kiri saat tidak aktif
+ * - Transisi untuk animasi perpindahan
+ */
+.switch-slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+/* 
+ * Warna switch saat aktif
+ */
+input:checked+.switch-slider {
+    background-color: #1e3a8a;
+}
+
+/* 
+ * Posisi bulatan saat switch aktif
+ * - Geser ke kanan
+ */
+input:checked+.switch-slider:before {
+    transform: translateX(20px);
+}
+
+/* 
+ * Responsive design untuk layar <= 768px
+ * - Sidebar disembunyikan di luar layar
+ * - Animasi slide saat dibuka
+ */
+@media (max-width: 768px) {
+    .sidebar {
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+    }
+
+    .sidebar.open {
+        transform: translateX(0);
+    }
+}
+
+/* 
+ * Smooth scrolling untuk navigasi anchor
+ * - Efek scroll halus
+ * - Padding atas untuk mengkompensasi fixed header
+ */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 2rem; 
+}
+
+/* 
+ * Gaya untuk navigasi link
+ * - Efek hover dengan garis bawah animasi
+ * - Transisi halus
+ */
+.nav-link {
+    position: relative;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+/* 
+ * Garis bawah animasi pada nav-link
+ * - Muncul dari kiri ke kanan saat hover
+ */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: -100%;
+    background-color: #1e3a8a; 
+    transition: all 0.3s ease;
+}
+
+/* 
+ * Efek hover dan active state untuk nav-link
+ * - Garis bawah muncul
+ * - Warna dan berat font berubah
+ */
+.nav-link:hover::after,
+.nav-link.active::after {
+    left: 0;
+}
+
+.nav-link.active {
+    background-color: white; 
+    color: #1e3a8a; 
+    font-weight: 500;
+}
+
+/* 
+ * Transisi untuk sidebar
+ * - Efek halus saat membuka/menutup
+ */
+.sidebar {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* 
+ * Offset untuk navigasi anchor
+ * - Mencegah konten tertutup oleh fixed header
+ */
+:target::before {
+    content: "";
+    display: block;
+    height: 6rem; 
+    margin-top: -6rem; 
+    visibility: hidden;
+}
+
+/* Animasi Circular Progress Bar */
+.circular-progress {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circular-progress svg {
+    transform: rotate(0.1deg); /* Memastikan rendering yang lebih halus */
+}
+
+.circular-progress circle {
+    transition: stroke-dashoffset 1.5s ease-in-out;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+}
+
+.circular-progress text {
+    font-weight: 600;
+    transition: opacity 0.3s ease;
+}
+
+/* Efek hover untuk circular progress */
+.circular-progress:hover circle:nth-child(2) {
+    filter: drop-shadow(0 0 8px rgba(30, 58, 138, 0.5));
+}
+
+.circular-progress:hover text {
+    font-weight: 700;
+    transform: scale(1.05);
+}
+
+/* Transisi untuk teks persentase */
+.circular-progress text {
+    transition: all 0.3s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .circular-progress {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .circular-progress text {
+        font-size: 1.25rem;
+    }
+}
